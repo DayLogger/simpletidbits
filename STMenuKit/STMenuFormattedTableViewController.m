@@ -177,10 +177,17 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView
+titleForFooterInSection:(NSInteger)section
+{
+    return NSLocalizedString([[self.st_sections objectAtIndex:section]
+            footer], nil);
+}
+
+- (NSString *)tableView:(UITableView *)tableView
 titleForHeaderInSection:(NSInteger)section
 {
-    return [[self.st_sections objectAtIndex:section]
-            title];
+    return NSLocalizedString([[self.st_sections objectAtIndex:section]
+            title], nil);
 }
 
 // Customize the number of rows in the table view.

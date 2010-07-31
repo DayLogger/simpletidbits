@@ -50,7 +50,7 @@ static NSMutableDictionary *st_classForCellClassName = nil;
 // title is copied, defaults to setting textLabel.text to title
 - (void)setTitle:(NSString *)title
 {
-    self.textLabel.text = title;
+    self.textLabel.text = NSLocalizedString(title, nil);
 }
 
 // defaults to setting defaultTextLabel.text to [value description]

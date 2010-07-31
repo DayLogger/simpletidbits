@@ -1,5 +1,5 @@
 //
-//  STMenuTextFieldTableViewCell.h
+//  STMenuTextViewTableViewCell.h
 //  STMenuKit
 //
 //  Created by Jason Gregori on 12/4/09.
@@ -19,16 +19,12 @@
  animations. We might need to use a custom VC instead of UITableViewController.
  */
 
-@interface STMenuTextFieldTableViewCell : STMenuTableViewCell
-<UITextFieldDelegate>
+@interface STMenuTextViewTableViewCell : STMenuTableViewCell <UITextViewDelegate>
 {
-    UITextField     *_textView;
+    UITextView      *_textView;
     NSIndexPath     *_nextCellIndexPath;
-    BOOL            _deselectOnReturn;
-    BOOL            _doneOnReturn;
-    BOOL            isNumber;
 }
-@property (nonatomic, retain, readonly) UITextField *textField;
+@property (nonatomic, retain, readonly) UITextView *textView;
 
 // TextInputTraits, these all return nil, they are setonly
 
@@ -52,10 +48,6 @@
 //          emergencyCall
 // Default: default
 @property (nonatomic, copy)     NSString    *returnKeyType;
-// Options: default, right
-// Default: default
-@property (nonatomic, copy)     NSString    *textAlign;
-@property (assign) BOOL clearsOnEnter;
 
 // Other traits. Also setOnly.
 
@@ -63,13 +55,5 @@
 // When this is set, tapping the return key selects this row
 // Making this non nil also sets returnKeyType to next.
 @property (nonatomic, copy)     NSString    *nextCellIndexPath;
-// BOOL
-// When this value is YES, we deselect the cell on return.
-// Default: YES
-@property (nonatomic, retain)   NSNumber    *deselectOnReturn;
-// BOOL
-// When this value is YES, we call menu's done method when the return key is
-// tapped. Default: NO
-@property (nonatomic, retain)   NSNumber    *doneOnReturn;
 
 @end

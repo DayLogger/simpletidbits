@@ -11,7 +11,7 @@
 
 @implementation STMenuSubMenuCellViewController
 @synthesize cell = _cell;
-@synthesize dontStyleCell   = _dontStyleCell;
+//@synthesize dontStyleCell   = _dontStyleCell;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -104,6 +104,7 @@
     STMenuTableViewCell *cell   = [self st_cellWithCellData:self.cell
                                                         key:self.key];
     cell.delegate   = self;
+    [cell setTitle:self.title];
     [cell setValue:self.subValue];
 	
     return cell;

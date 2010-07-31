@@ -20,13 +20,15 @@
 @implementation STMenuDateViewController
 @synthesize mode = _mode, maximumDate = _maximumDate,
             minimumDate = _minimumDate, minuteInterval = _minuteInterval,
-            st_datePicker = _datePicker, st_tableView = _tableView;
+            st_datePicker = _datePicker, st_tableView = _tableView,
+            prompt = _prompt;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     if (self = [super initWithStyle:UITableViewStyleGrouped])
     {
         [super setCell:@"Date"];
+        self.dontStyleCell = [NSNumber numberWithBool:TRUE];
     }
     return self;
 }
@@ -34,6 +36,7 @@
 - (void)dealloc
 {
     [_mode release];
+    self.prompt = nil;
     [_maximumDate release];
     [_minimumDate release];
     [_minuteInterval release];
@@ -147,6 +150,10 @@
     else if ([lowercaseMode isEqualToString:@"date"])
     {
         datePicker.datePickerMode   = UIDatePickerModeDate;
+    }
+    else if ([lowercaseMode isEqualToString:@"countdown"])
+    {
+        datePicker.datePickerMode   = UIDatePickerModeCountDownTimer;
     }
     else
     {

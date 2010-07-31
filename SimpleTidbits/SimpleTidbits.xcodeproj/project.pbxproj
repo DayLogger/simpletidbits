@@ -314,6 +314,7 @@
 				GCC_PREFIX_HEADER = SimpleTidbits_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = SimpleTidbits;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -328,6 +329,7 @@
 				GCC_PREFIX_HEADER = SimpleTidbits_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = SimpleTidbits;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};
@@ -341,7 +343,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -354,7 +356,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
 		};

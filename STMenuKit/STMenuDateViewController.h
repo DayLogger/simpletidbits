@@ -21,6 +21,7 @@
 {
   @protected
     NSString        *_mode;
+    NSString        *_prompt;
     NSDate          *_maximumDate;
     NSDate          *_minimumDate;
     NSNumber        *_minuteInterval;
@@ -30,6 +31,7 @@
 }
 // Possible values: time, date, dateAndTime
 @property (nonatomic, copy)     NSString    *mode;
+@property (nonatomic, copy)     NSString    *prompt;
 
 @property (nonatomic, retain)   NSDate      *maximumDate;
 @property (nonatomic, retain)   NSDate      *minimumDate;

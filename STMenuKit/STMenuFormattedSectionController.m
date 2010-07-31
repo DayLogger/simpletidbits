@@ -10,11 +10,12 @@
 
 
 @implementation STMenuFormattedSectionController
-@synthesize menu = _menu, section = _section, title = _title;
+@synthesize menu = _menu, section = _section, title = _title, footer = _footer;
 
 - (void)dealloc
 {
     [_title release];
+    [_footer release];
     
     [super dealloc];
 }

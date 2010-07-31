@@ -112,7 +112,7 @@
         // set value
         subMenu.value   = item;
         // set title
-        subMenu.title   = self.itemTitle;
+        subMenu.title   = NSLocalizedString(self.itemTitle, nil);
         
         // set current item
         self.st_currentlyShowingItem    = item;

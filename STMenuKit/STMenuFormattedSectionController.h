@@ -29,6 +29,7 @@
     STMenuFormattedTableViewController  *_menu;
     NSUInteger      _section;
     NSString        *_title;
+    NSString        *_footer;
 }
 // Not plist properties
 @property (nonatomic, assign)   STMenuFormattedTableViewController  *menu;
@@ -38,6 +39,9 @@
 
 // plist property
 @property (nonatomic, copy)     NSString        *title;
+
+// plist property
+@property (nonatomic, copy)     NSString        *footer;
 
 // Menu
 // Called when menu's value property has changed.

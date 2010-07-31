@@ -12,6 +12,14 @@
 @implementation STMenuDateTableViewCell
 @synthesize mode = _mode;
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) {
+        self.textLabel.textColor = [UIColor blackColor];
+        self.textLabel.font = [UIFont boldSystemFontOfSize:17];
+    }
+    return self;
+}
+
 - (void)setValue:(id)value
 {
     NSAssert(!value || [value isKindOfClass:[NSDate class]],
