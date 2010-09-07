@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		221DFFA411F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 221DFFA211F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.h */; };
 		221DFFA511F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221DFFA311F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.m */; };
+		2226F3B61231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2226F3B41231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.h */; };
+		2226F3B71231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2226F3B51231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.m */; };
 		229CA7D911EEC065000C68D3 /* STMenuMultiSelectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 229CA7D711EEC065000C68D3 /* STMenuMultiSelectViewController.h */; };
 		229CA7DA11EEC065000C68D3 /* STMenuMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229CA7D811EEC065000C68D3 /* STMenuMultiSelectViewController.m */; };
 		22C6BCD911EE0AE900AC847E /* STMenuTextViewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22C6BCD711EE0AE900AC847E /* STMenuTextViewViewController.h */; };
@@ -98,6 +100,8 @@
 /* Begin PBXFileReference section */
 		221DFFA211F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuTimeIntervalTableViewCell.h; sourceTree = "<group>"; };
 		221DFFA311F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuTimeIntervalTableViewCell.m; sourceTree = "<group>"; };
+		2226F3B41231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuWideButtonTableViewCell.h; sourceTree = "<group>"; };
+		2226F3B51231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuWideButtonTableViewCell.m; sourceTree = "<group>"; };
 		229CA7D711EEC065000C68D3 /* STMenuMultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuMultiSelectViewController.h; sourceTree = "<group>"; };
 		229CA7D811EEC065000C68D3 /* STMenuMultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuMultiSelectViewController.m; sourceTree = "<group>"; };
 		22C6BCD711EE0AE900AC847E /* STMenuTextViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuTextViewViewController.h; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 				79B7389110D89A1F003F5027 /* STMenuLabelTableViewCell.m */,
 				221DFFA211F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.h */,
 				221DFFA311F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.m */,
+				2226F3B41231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.h */,
+				2226F3B51231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				22C6BCE611EE1A6C00AC847E /* STMenuTextViewTableViewCell.h in Headers */,
 				229CA7D911EEC065000C68D3 /* STMenuMultiSelectViewController.h in Headers */,
 				221DFFA411F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.h in Headers */,
+				2226F3B61231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +443,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "STMenuKit" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* STMenuKit */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -499,6 +513,7 @@
 				22C6BCE711EE1A6C00AC847E /* STMenuTextViewTableViewCell.m in Sources */,
 				229CA7DA11EEC065000C68D3 /* STMenuMultiSelectViewController.m in Sources */,
 				221DFFA511F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.m in Sources */,
+				2226F3B71231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +579,7 @@
 				HEADER_SEARCH_PATHS = ..;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -578,7 +593,7 @@
 				HEADER_SEARCH_PATHS = ..;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};
