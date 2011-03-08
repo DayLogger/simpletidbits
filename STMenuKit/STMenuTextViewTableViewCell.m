@@ -17,7 +17,6 @@
 @property (nonatomic, assign) BOOL          st_doneOnReturn;
 
 - (void)st_deselectIfNotSelectedCell;
-- (void)st_textViewValueDidChange;
 
 @end
 
@@ -35,7 +34,7 @@
         // we do this because we copy styles from the detailTextLabel
         style   = UITableViewCellStyleValue1;
     }
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
+    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]))
     {
         self.selectionStyle     = UITableViewCellSelectionStyleNone;
         _textView              = [[UITextView alloc] init];

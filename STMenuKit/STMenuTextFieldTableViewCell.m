@@ -25,7 +25,7 @@
 @implementation STMenuTextFieldTableViewCell
 @synthesize textField = _textView, st_nextCellIndexPath = _nextCellIndexPath,
             st_deselectOnReturn = _deselectOnReturn,
-            st_doneOnReturn = _doneOnReturn;
+            st_doneOnReturn = _doneOnReturn, textAlign, clearsOnEnter;
 
 - (id)initWithStyle:(UITableViewCellStyle)style
     reuseIdentifier:(NSString *)reuseIdentifier
@@ -35,7 +35,7 @@
         // we do this because we copy styles from the detailTextLabel
         style   = UITableViewCellStyleValue1;
     }
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
+    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]))
     {
         self.selectionStyle     = UITableViewCellSelectionStyleNone;
         _textView              = [[UITextField alloc] init];
