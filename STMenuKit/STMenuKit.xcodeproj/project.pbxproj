@@ -76,6 +76,8 @@
 		79F7A19C10DF7D1500CFCDF6 /* libSimpleTidbits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F7A19B10DF7D1100CFCDF6 /* libSimpleTidbits.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AA747D9F0F9514B9006C5449 /* STMenuKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* STMenuKit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B02F528A12B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B02F528812B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.h */; };
+		B02F528B12B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F528912B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.m */; };
 		F728F39610D6B452005B527A /* STMenuBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F728F39410D6B452005B527A /* STMenuBaseViewController.h */; };
 		F728F39710D6B452005B527A /* STMenuBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F728F39510D6B452005B527A /* STMenuBaseViewController.m */; };
 /* End PBXBuildFile section */
@@ -167,6 +169,8 @@
 		79F7A19610DF7D1100CFCDF6 /* SimpleTidbits.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleTidbits.xcodeproj; path = ../SimpleTidbits/SimpleTidbits.xcodeproj; sourceTree = SOURCE_ROOT; };
 		AA747D9E0F9514B9006C5449 /* STMenuKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuKit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B02F528812B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuActionSubtitleTableViewCell.h; sourceTree = "<group>"; };
+		B02F528912B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuActionSubtitleTableViewCell.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libSTMenuKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTMenuKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F728F39410D6B452005B527A /* STMenuBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuBaseViewController.h; sourceTree = "<group>"; };
 		F728F39510D6B452005B527A /* STMenuBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuBaseViewController.m; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 		794E01E910D9DE6D000C1852 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B02F528812B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.h */,
+				B02F528912B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.m */,
 				79D1798810B8AD73008A5B54 /* STMenuTableViewCell.h */,
 				79D1798910B8AD73008A5B54 /* STMenuTableViewCell.m */,
 				79B0DA101103C80300F77242 /* STMenuValueToStringTableViewCell.h */,
@@ -412,6 +418,7 @@
 				229CA7D911EEC065000C68D3 /* STMenuMultiSelectViewController.h in Headers */,
 				221DFFA411F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.h in Headers */,
 				2226F3B61231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.h in Headers */,
+				B02F528A12B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +521,7 @@
 				229CA7DA11EEC065000C68D3 /* STMenuMultiSelectViewController.m in Sources */,
 				221DFFA511F6A52D007347F7 /* STMenuTimeIntervalTableViewCell.m in Sources */,
 				2226F3B71231C8BF005C6FD1 /* STMenuWideButtonTableViewCell.m in Sources */,
+				B02F528B12B9BE4300A8F3AF /* STMenuActionSubtitleTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +549,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = STMenuKit_Prefix.pch;
+				GCC_VERSION = 4.2;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -579,7 +588,7 @@
 				HEADER_SEARCH_PATHS = ..;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -593,7 +602,7 @@
 				HEADER_SEARCH_PATHS = ..;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
