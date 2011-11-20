@@ -21,9 +21,12 @@
     {
         self.backgroundColor = [UIColor clearColor];
 
-        UIButton *cellButton = [[UIButton alloc] initWithFrame:self.contentView.bounds];
+        CGRect frame = self.contentView.bounds;
+        frame.size.width = frame.size.width - 20;
+        UIButton *cellButton = [[UIButton alloc] initWithFrame:frame];
         [cellButton addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
         cellButton.hidden = NO;
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [self.contentView addSubview:cellButton];
         self.button = cellButton;
         [cellButton release];

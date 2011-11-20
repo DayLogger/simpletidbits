@@ -8,6 +8,7 @@
 
 #import "STMenuDateTableViewCell.h"
 #import <SimpleTidbits/SimpleTidbits.h>
+#import <SimpleTidbits/NSDateAdditions.h>
 
 @implementation STMenuDateTableViewCell
 @synthesize mode = _mode;
@@ -26,6 +27,7 @@
              @"Set value of Date Cell to non date.");
     
     NSString    *lowercaseMode  = [self.mode lowercaseString];
+    NSLog(@"mode: %@", lowercaseMode);
     NSString    *text   = nil;
     if ([lowercaseMode isEqualToString:@"time"])
     {
