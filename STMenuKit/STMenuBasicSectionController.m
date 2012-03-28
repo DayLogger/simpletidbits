@@ -145,7 +145,7 @@
     
     [self st_startObservingNewValue:newValue];
     
-    [self reloadSection:NO];
+    //[self reloadSection:NO];
 }
 
 // submenus
