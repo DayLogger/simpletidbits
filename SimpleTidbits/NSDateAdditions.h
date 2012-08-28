@@ -20,6 +20,8 @@
 - (NSString *)st_longDateStringValue;
 // Example: “3:30pm”
 - (NSString *)st_timeStringValue;
+// Example: “4:32”
+- (NSString *)st_timerStyleStringValue;
 
 - (NSDate *)st_dateByRoundingToNearest:(NSUInteger)minutes;
 

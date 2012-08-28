@@ -12,6 +12,7 @@ static NSDateFormatter *stringDateFormatter = nil;
 static NSDateFormatter *shortDateFormatter = nil;
 static NSDateFormatter *longDateFormatter = nil;
 static NSDateFormatter *timeDateFormatter = nil;
+static NSDateFormatter *timerStyleFormatter = nil;
 
 @implementation NSDate (SimpleTidbits)
 
@@ -57,6 +58,17 @@ static NSDateFormatter *timeDateFormatter = nil;
         [timeDateFormatter setTimeStyle:NSDateFormatterShortStyle];
     }
     return [timeDateFormatter stringFromDate:self];
+}
+
+
+- (NSString *)st_timerStyleStringValue
+{
+    if (!timerStyleFormatter)
+    {
+        timerStyleFormatter   = [[NSDateFormatter alloc] init];
+        [timerStyleFormatter setDateFormat:@"H:mm"];
+    }
+    return [timerStyleFormatter stringFromDate:self];
 }
 
 

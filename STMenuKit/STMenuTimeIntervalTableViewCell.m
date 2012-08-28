@@ -7,6 +7,7 @@
 //
 
 #import "STMenuTimeIntervalTableViewCell.h"
+#import <SimpleTidbits/NSDateAdditions.h>
 
 
 @implementation STMenuTimeIntervalTableViewCell
@@ -20,6 +21,23 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
+}
+
+- (void)setValue:(id)value
+{
+    NSAssert(!value || [value isKindOfClass:[NSNumber class]],
+             @"Set value of Time Interval Cell to non number.");
+    
+    // Midnight
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components:(NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *midnight = [gregorian dateFromComponents:components];
+    [gregorian release];
+    
+    NSDate *equivalent = [NSDate dateWithTimeInterval:[value doubleValue] sinceDate:midnight];
+    NSString *text = [equivalent st_timerStyleStringValue];
+    
+    [self setValueString:text];
 }
 
 @end
