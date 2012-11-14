@@ -449,7 +449,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "STMenuKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -544,6 +544,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = STMenuKit_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 			};
 			name = Debug;
 		};
@@ -552,6 +553,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = STMenuKit_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 			};
 			name = Release;
 		};
@@ -563,6 +565,7 @@
 					armv6,
 					i386,
 				);
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ..;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
@@ -584,6 +587,7 @@
 					armv6,
 					i386,
 				);
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ..;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
