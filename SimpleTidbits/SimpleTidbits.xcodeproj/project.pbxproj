@@ -400,7 +400,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				SDKROOT = iphoneos5.1;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = armv6;
 			};
