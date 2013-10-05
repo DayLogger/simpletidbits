@@ -218,8 +218,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // let the cell know it was selected
-    [((STMenuTableViewCell *)[tableView cellForRowAtIndexPath:indexPath])
-     cellWasSelected];
+    [((STMenuTableViewCell *)[tableView cellForRowAtIndexPath:indexPath]) cellWasSelected];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     // tell the section controller whats up
     [[self.st_sections objectAtIndex:indexPath.section]

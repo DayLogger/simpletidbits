@@ -22,7 +22,8 @@
         self.backgroundColor = [UIColor clearColor];
 
         CGRect frame = self.contentView.bounds;
-        frame.size.width = frame.size.width - 20;
+        frame.size.width = frame.size.width - 40;
+        frame.origin.x = 20;
         UIButton *cellButton = [[UIButton alloc] initWithFrame:frame];
         [cellButton addTarget:self action:@selector(clicked) forControlEvents:UIControlEventTouchUpInside];
         cellButton.hidden = NO;
