@@ -29,7 +29,7 @@
             st_schema = _schema, parentMenuShouldSave = _parentMenuShouldSave,
             st_subMenu = _subMenu, st_cachedMenus = _cachedMenus,
             loadingMessage = _loadingMessage, loadingView = _loadingView,
-            menuKey = _menuKey, delegateKey = _delegateKey, newMode = _newMode,
+            menuKey = _menuKey, delegateKey = _delegateKey, newestMode = _newestMode,
             st_inModal = _inModal, headerMessage = _headerMessage;
 
 
@@ -61,7 +61,7 @@
     [_cachedMenus release];
     [_menuKey release];
     [_delegateKey release];
-    [_newMode release];
+    [_newestMode release];
     [_headerMessage release];
     
     [super dealloc];
@@ -312,7 +312,7 @@
 {
     // unregister menu key
     self.menuKey    = nil;
-    self.newMode    = nil;
+    self.newestMode    = nil;
     self.headerMessage  = nil;
 }
 

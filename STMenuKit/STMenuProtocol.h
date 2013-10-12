@@ -32,7 +32,7 @@
 
 // Some menus may have a "new" mode. For example Edit Menu has a new mode with
 // a cancel button instead of a back button.
-@property (nonatomic, retain)   NSNumber    *newMode;
+@property (nonatomic, retain)   NSNumber    *newestMode;
 
 // When a menu is loading, it should stop the user from accessing anything and
 // display some kind of ui so the user knows what's going on.

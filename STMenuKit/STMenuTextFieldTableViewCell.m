@@ -175,6 +175,11 @@
     return nil;
 }
 
+- (BOOL)clearsOnEnter
+{
+    return self.textField.clearsOnBeginEditing;
+}
+
 - (void)setClearsOnEnter:(BOOL)clears {
     self.textField.clearsOnBeginEditing = clears;
 }

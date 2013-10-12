@@ -21,7 +21,7 @@
             st_addButton = _addButton, rowHeight = _rowHeight,
             st_showNoItemsMessage = _showNoItemsMessage,
             noItemsRow = _noItemsRow, noItemsMessage = _noItemsMessage,
-            noItemsMessageCell = _noItemsMessageCell, newItem = _newItem,
+            noItemsMessageCell = _noItemsMessageCell, newestItem = _newestItem,
             showTitle = _showTitle;
 
 /*
@@ -42,7 +42,7 @@
     [_cell release];
     [_allowDeletion release];
     [_addMenu release];
-    [_newItem release];
+    [_newestItem release];
     [_showTitle release];
     
     [super dealloc];
@@ -52,7 +52,7 @@
 // Override to provide something else.
 - (id)st_copyOfNewItem
 {
-    return [[self.newItem copy] autorelease];
+    return [[self.newestItem copy] autorelease];
 }
 
 // show add menu
@@ -95,7 +95,7 @@
     // set value
     addMenu.value   = newItem;
     // set to new mode
-    addMenu.newMode = [NSNumber numberWithBool:YES];
+    addMenu.newestMode = [NSNumber numberWithBool:YES];
     
     // display
     [self st_presentMenu:addMenu];
@@ -121,7 +121,7 @@
         if (!self.addMenu)
         {
             // we might have set this on an add
-            subMenu.newMode = [NSNumber numberWithBool:NO];
+            subMenu.newestMode = [NSNumber numberWithBool:NO];
         }
         
         [self st_pushMenu:subMenu];

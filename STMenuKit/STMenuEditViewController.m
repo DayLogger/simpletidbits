@@ -51,7 +51,7 @@
     // hide back button when editing
     [self.navigationItem setHidesBackButton:editing animated:animated];
     
-    if (![self.newMode boolValue])
+    if (![self.newestMode boolValue])
     {
         // in not new mode
         
@@ -61,7 +61,7 @@
     
     if ([self.showDeleteButton boolValue] && [self isViewLoaded])
     {
-        if (editing && ![self.newMode boolValue])
+        if (editing && ![self.newestMode boolValue])
         {
             // show delete button
             UIButton    *button     = [UIButton
@@ -116,7 +116,7 @@
 
 - (void)saveItem
 {
-    if ([self.newMode boolValue])
+    if ([self.newestMode boolValue])
     {
         self.parentMenuShouldSave   = YES;
         [self dismiss];
@@ -216,9 +216,9 @@
     self.showDeleteButton   = nil;
 }
 
-- (void)setNewMode:(NSNumber *)newMode
+- (void)setNewestMode:(NSNumber *)newMode
 {
-    [super setNewMode:newMode];
+    [super setNewestMode:newMode];
     
     if ([newMode boolValue])
     {

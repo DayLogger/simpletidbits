@@ -33,7 +33,7 @@
     NSString        *_key;
     BOOL            _parentMenuShouldSave;
     
-    NSNumber        *_newMode;
+    NSNumber        *_newestMode;
     
     BOOL            _inModal;
     

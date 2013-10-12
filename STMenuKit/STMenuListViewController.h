@@ -54,7 +54,7 @@
     NSString    *_showTitle;
     id          _addMenu;
     id          _noItemsMessageCell;
-    id          _newItem;
+    id          _newestItem;
 }
 @property (nonatomic, retain)   NSNumber    *rowHeight; // float
 @property (nonatomic, retain)   NSNumber    *noItemsRow;    // Message row
@@ -69,7 +69,7 @@
 @property (nonatomic, copy)     NSString    *showTitle; // itemMenu show title
 @property (nonatomic, retain)   id          addMenu;    // (STMenuMaker Item)
 @property (nonatomic, retain)   id          noItemsMessageCell; // (STMenuMaker)
-@property (nonatomic, retain)   id          newItem;    // used for addItem
+@property (nonatomic, retain)   id          newestItem;    // used for addItem
 
 - (void)setShowAddButton:(BOOL)show animated:(BOOL)animated;
 - (void)setShowEditButton:(BOOL)show animated:(BOOL)animated;

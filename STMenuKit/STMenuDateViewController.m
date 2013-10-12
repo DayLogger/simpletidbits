@@ -101,7 +101,7 @@
 - (UITableView *)tableView
 {
     // make sure view is loaded
-    self.view;
+    NSLog(@"%@", self.view);
     return self.st_tableView;
 }
 
@@ -125,6 +125,7 @@
     view.autoresizingMask       = (UIViewAutoresizingFlexibleHeight
                                    | UIViewAutoresizingFlexibleWidth);
     self.view   = view;
+    self.view.backgroundColor = [UIColor whiteColor];
     [view release];
 
     UIDatePicker    *datePicker = [[UIDatePicker alloc]
