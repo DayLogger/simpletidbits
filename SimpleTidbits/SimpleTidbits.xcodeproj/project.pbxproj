@@ -321,6 +321,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SimpleTidbits_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = SimpleTidbits;
 				SKIP_INSTALL = YES;
@@ -336,6 +337,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SimpleTidbits_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = SimpleTidbits;
 				SKIP_INSTALL = YES;
