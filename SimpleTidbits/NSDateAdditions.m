@@ -80,11 +80,11 @@ static NSDateFormatter *timerStyleFormatter = nil;
     }
     
     NSDateComponents	*dateComponents
-      = [[NSCalendar currentCalendar] components:(NSYearCalendarUnit
-                                                  | NSMonthCalendarUnit
-                                                  | NSDayCalendarUnit
-                                                  | NSHourCalendarUnit
-                                                  | NSMinuteCalendarUnit)
+      = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear
+                                                  | NSCalendarUnitMonth
+                                                  | NSCalendarUnitDay
+                                                  | NSCalendarUnitHour
+                                                  | NSCalendarUnitMinute)
                                         fromDate:self];
     // should we round up or down?
     NSUInteger  minutesModRounder   = [dateComponents minute] % minutes;
